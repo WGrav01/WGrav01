@@ -4,9 +4,12 @@ on:
   push:
   schedule:
     - cron: "0 */1 * * *"
+  workflow_dispatch:
 
 jobs:
   markscribe:
+
+
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -25,3 +28,6 @@ jobs:
           commit_user_name: readme-scribe 🤖
           commit_user_email: actions@github.com
           commit_author: readme-scribe 🤖 <actions@github.com>
+
+
+
